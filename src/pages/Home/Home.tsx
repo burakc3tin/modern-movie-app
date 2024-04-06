@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className='main'>
       
     </div>
   );
