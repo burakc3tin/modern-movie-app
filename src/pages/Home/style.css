@@ -13,3 +13,7 @@
     padding-bottom: 12em;
     /* filter: brightness(0.7) contrast(1.2);   */
 }
+
+.page-link {
+    color: black;
+}

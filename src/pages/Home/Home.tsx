@@ -3,6 +3,7 @@ import './style.css';
 import Table from '../../components/Table';
 import SearchBar from '../../components/SearchBar';
 import Title from '../../components/Title';
+import Pagination from '../../components/Pagination';
  
 const Home: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <Title/>
       <SearchBar/>
         <Table/>
+        <Pagination/>
     </div>
   );
 }
