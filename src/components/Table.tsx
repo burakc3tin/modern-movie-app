@@ -1,16 +1,62 @@
-import React from 'react';
+import { FC } from 'react';
+import { COLUMN_ONE, COLUMN_SECOND, COLUMN_THIRD } from '../constants/constant';
 
-export default function Table() {
+const Table: FC = () => {
   return (
     <table className="table table-warning text-center">
       <thead>
         <tr>
-          <th scope="col">IMDB ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Release Info</th>
+          <th scope="col">{COLUMN_ONE}</th>
+          <th scope="col">{COLUMN_SECOND}</th>
+          <th scope="col">{COLUMN_THIRD}</th>
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
+        <tr>
+          <th scope="row">1acas3d</th>
+          <td>Titanic</td>
+          <td>1986</td>
+        </tr>
         <tr>
           <th scope="row">1acas3d</th>
           <td>Titanic</td>
@@ -20,3 +66,5 @@ export default function Table() {
     </table>
   );
 }
+
+export default Table;
