@@ -4,7 +4,7 @@ import axios from 'axios';
  export const fetchMovie = createAsyncThunk(
     'movies/fetchMovie',
     async (query) => {
-      const response = await axios.get(`https://www.omdbapi.com/?t=${query}&apikey=77573225`);
+      const response = await axios.get(`https://www.omdbapi.com/?s=${query}&apikey=77573225`);
       return response.data;
     }
   );

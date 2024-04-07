@@ -4,6 +4,7 @@ export const TITLE_TEXT = "🎞️ Movie's Park";
 //Search Bar
 export const MOVIE_NAME = "Movie name...";
 export const MOVIE_RELEASE_YEAR = "Year...";
+export const SEARCH_BUTTON_TEXT = "🔎";
 
 //Table
 export const COLUMN_ONE = "IMDB ID";
