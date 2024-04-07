@@ -1,7 +1,9 @@
 import { FC } from 'react';
 import { COLUMN_ONE, COLUMN_SECOND, COLUMN_THIRD } from '../constants/constant';
-
+import '../pages/Home/style.css';
+ 
 const Table: FC = () => {
+ 
   return (
     <table className="table table-warning text-center">
       <thead>

@@ -13,11 +13,3 @@
     padding-bottom: 1em;
     /* filter: brightness(0.7) contrast(1.2);   */
 }
-
-.page-link {
-    color: black;
-}
-
-tr{
-    cursor: pointer;
-}
