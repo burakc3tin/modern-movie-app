@@ -1,10 +1,10 @@
-import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchMovie = createAsyncThunk(
   'movies/fetchMovie',
   async ({ query, page, year }) => {
-    const response = await axios.get(`https://www.omdbapi.com/?s=${query}&y=${year}&page=${page}&apikey=77573225`);
+    const response = await axios.get(`https://www.omdbapi.com/?s=${query}&y=${year}&page=${page}&apikey=${import.meta.env.VITE_REACT_OMDB_KEY}`);
     return response.data;   
   }
 );
@@ -12,7 +12,7 @@ export const fetchMovie = createAsyncThunk(
 export const fetchSingleMovie = createAsyncThunk(
   'movies/fetchSingleMovie',
   async (title) => {
-    const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=77573225`);
+    const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=${import.meta.env.VITE_REACT_OMDB_KEY}`);
     return response.data;
   }
 );

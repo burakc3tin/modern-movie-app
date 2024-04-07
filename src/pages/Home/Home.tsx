@@ -6,6 +6,7 @@ import Title from '../../components/Title';
 import Pagination from '../../components/Pagination';
  
 const Home: React.FC = () => {
+ 
   return (
     <div className='main'>
       <Title/>

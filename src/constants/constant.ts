@@ -18,6 +18,7 @@ export const NEXT = "Next";
 //Close Button
 export const CLOSE_TEXT = "❌";
 
-
+//Card
+export const IMDB_BUTTON_TEXT = "IMDb↗️";
  
 

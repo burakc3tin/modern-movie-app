@@ -1,0 +1,122 @@
+/* --- Table --- */
+tr {
+    cursor: pointer;
+}
+
+@media (max-height: 600px) {
+    .table>:not(caption)>*>* {
+        padding: 0;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 600px) {
+    .table>:not(caption)>*>* {
+        padding: 0;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 450px) {
+    .table>:not(caption)>*>* {
+        padding: 0;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 400px) {
+    .table>:not(caption)>*>* {
+        padding: 0;
+        font-size: 12px;
+    }
+}
+
+/* --- Close Button --- */
+.close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+@media (max-width: 400px) {
+    .close-btn {
+        font-size: 20px;
+    }
+}
+
+/* --- Pagination --- */
+@media (max-width: 400px) {
+    .page-link {
+        font-size: 12px;
+    }
+}
+
+.page-link {
+    color: black;
+}
+
+
+/* --- Search Inputs --- */
+.form-control {
+    border-right: white;
+    border-left: white;
+}
+
+@media (max-width: 400px) {
+
+    .form-control {
+        font-size: 12px;
+    }
+}
+
+/* --- Search Button --- */
+
+.button {
+    border-left: white;
+    border-right: white;
+
+    border-top: 0.1px solid #F2D330;
+    border-bottom: 0.1px solid #F2D330;
+    outline: none;
+
+    background-color: white;
+}
+
+/* --- Card --- */
+@media (max-height: 600px) {
+    .card img{
+        width: 150px;
+        height: 150px;
+        margin-left: 67px;
+   }
+}
+@media (max-width: 600px) {
+    .card img{
+        width: 250px;
+        height: 250px;
+        margin-left: 18px;
+   }
+}
+@media (max-width: 400px) {
+    .h5{
+        font-size: 16px;
+    }
+    .h6{
+        font-size: 14px;
+    }
+
+    .paragraph{
+        font-size: 13px;
+    }
+    .card img{
+        width: 250px;
+        height: 250px;
+        margin-left: 18px;
+        
+   }
+}
+
+ 
+

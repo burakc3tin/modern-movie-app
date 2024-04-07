@@ -5,12 +5,12 @@ import CloseButton from '../../components/CloseButton';
 import { useParams } from 'react-router-dom';
 
 const Detail: React.FC = () => {
-    const { id } = useParams<{ id: string }>(); // URL'den film ID'sini al
+    const { id } = useParams<{ id: string }>();  
 
     return (
         <div className='main'>
             <CloseButton/>
-            <Card id={id} /> {/* Card bileşenine ID'yi props olarak geçir */}
+            <Card id={id} />  
         </div>
     );
 }
