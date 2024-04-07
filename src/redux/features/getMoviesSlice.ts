@@ -5,6 +5,14 @@ export const fetchMovie = createAsyncThunk(
   'movies/fetchMovie',
   async ({ query, page, year }) => {
     const response = await axios.get(`https://www.omdbapi.com/?s=${query}&y=${year}&page=${page}&apikey=77573225`);
+    return response.data;   
+  }
+);
+
+export const fetchSingleMovie = createAsyncThunk(
+  'movies/fetchSingleMovie',
+  async (title) => {
+    const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=77573225`);
     return response.data;
   }
 );
@@ -13,6 +21,7 @@ export const getMoviesSlice = createSlice({
   name: 'movies',
   initialState: {
     movie: null,
+    singleMovie: null,
     loading: false,
     error: null,
     currentPage: 1,
@@ -29,6 +38,9 @@ export const getMoviesSlice = createSlice({
     setYear(state, action) {
       state.year = action.payload;
     },
+    setSingleMovie(state, action) {  
+      state.singleMovie = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -43,15 +55,28 @@ export const getMoviesSlice = createSlice({
       .addCase(fetchMovie.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
+      })
+      .addCase(fetchSingleMovie.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchSingleMovie.fulfilled, (state, action) => {
+        state.loading = false;
+        state.singleMovie = action.payload; // fetchSingleMovie başarıyla tamamlandığında singleMovie değişkenine atanıyor.
+      })
+      .addCase(fetchSingleMovie.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
       });
   },
 });
 
-export const { setCurrentPage, setQuery, setYear } = getMoviesSlice.actions;
+export const { setCurrentPage, setQuery, setYear, setSingleMovie } = getMoviesSlice.actions;
 
 export const selectMovie = (state) => state.movies.movie;
 export const selectCurrentPage = (state) => state.movies.currentPage;
 export const selectQuery = (state) => state.movies.query; 
 export const selectYear = (state) => state.movies.year; 
+export const selectSingleMovie = (state) => state.movies.singleMovie; 
 
 export default getMoviesSlice.reducer;

@@ -1,24 +1,29 @@
-import React, { FC } from 'react';
-import { useSelector } from 'react-redux';
-import { selectMovie } from '../redux/features/getMoviesSlice';
+import React, { FC, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectMovie, selectSingleMovie, fetchSingleMovie } from '../redux/features/getMoviesSlice';
 
 const Card: FC<{ id: string }> = ({ id }) => {
-  const movies = useSelector(selectMovie);
-  const selectedMovie = movies?.Search?.find((movie) => movie.imdbID === id); // İlgili ID'ye sahip filmi bul
-
+  const dispatch = useDispatch();
+  const selectedMovie = useSelector(selectSingleMovie);
+ 
+  useEffect(() => {
+    dispatch(fetchSingleMovie(id));  
+  }, [dispatch]);
+ 
   return (
-    <div className="card shadow-lg p-3 mt-4 " style={{ width: "18rem" }}>
-      <img className="card-img-top" src={selectedMovie?.Poster} alt={selectedMovie?.Title} /> {/* Poster ve Title kullanarak resim ve başlık ekleyin */}
+    <div className="card shadow-lg p-3 mt-4 " style={{ width: "20rem" }}>
+              <h5 className="card-title h5 text-center">{selectedMovie?.Title}</h5>  
+          <h6 className='h6 text-center text-muted'>{selectedMovie?.Year} ▪️ {selectedMovie?.Runtime} ▪️ {selectedMovie?.Director}</h6>
+      <img className="card-img-top" src={selectedMovie?.Poster} alt={selectedMovie?.Title} />  
       <div className="card-body text-center">
-        <h5 className="card-title">{selectedMovie?.Title}</h5> {/* Başlık olarak filmin Title'ını kullan */}
-        <p className="card-text">
-          {selectedMovie?.Year} {/* Yıl bilgisini göster */}
+         <p className="card-text">
+          {selectedMovie?.Plot} 
         </p>
-        <p className="card-text">
-          IMDB ID: {selectedMovie?.imdbID} {/* imdbID bilgisini göster */}
+        <p className="card-text text-secondary">
+          {selectedMovie?.Genre}  
         </p>
         <a href={`https://www.imdb.com/title/${selectedMovie?.imdbID}`} className="btn btn-primary">
-          See More
+          IMDb↗️
         </a>
       </div>
     </div>

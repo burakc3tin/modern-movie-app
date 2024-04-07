@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Table: FC = () => {
   const navigate = useNavigate();
   const movies = useSelector(selectMovie); 
-
+ 
   return (
     <table className="table table-warning text-center">
       <thead>
@@ -23,7 +23,7 @@ const Table: FC = () => {
   movies.Search
     .filter(movie => movie.Type === 'movie' || movie.Type === 'series' || movie.Type === 'episode') // Sadece istenen türdeki filmleri getir
     .map((movie, index) => (
-      <tr onClick={() => navigate(`/detail/${movie.imdbID}`)} key={index}>
+      <tr onClick={() => navigate(`/detail/${movie.Title}`)} key={index}>
         <th scope="row">{movie.imdbID}</th>
         <td>{movie.Title}</td>
         <td>{movie.Year}</td>
