@@ -14,3 +14,9 @@ export const COLUMN_THIRD = "Release Info";
 export const PREVIOUS = "Previous";
 export const NEXT = "Next";
 
+//Close Button
+export const CLOSE_TEXT = "❌";
+
+
+ 
+
