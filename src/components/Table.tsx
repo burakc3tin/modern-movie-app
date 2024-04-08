@@ -1,16 +1,26 @@
 import { FC } from 'react';
 import { COLUMN_ONE, COLUMN_SECOND, COLUMN_THIRD } from '../constants/constant';
 import { useSelector } from 'react-redux';
-import { selectMovie } from '../redux/features/getMoviesSlice';
+import { selectMovie, selectLoading } from '../redux/features/getMoviesSlice';
 import { useNavigate } from 'react-router-dom';
+import {PacmanLoader } from 'react-spinners';
  import './_style.css';
 
 const Table: FC = () => {
   const navigate = useNavigate();
   const movies = useSelector(selectMovie);
+  const isLoading = useSelector(selectLoading);
+
 
   return (
-    <table className="table table-warning text-center">
+    <div style={{display:'flex', justifyContent:'center',alignItems:'center'}} className='table text-center'>
+ 
+    {isLoading ? ( 
+        
+          <PacmanLoader color="#d6bc36" />
+         
+      ) : ( <table className="table table-warning text-center">
+ 
       <thead>
         <tr>
           <th scope="col">{COLUMN_ONE}</th>
@@ -18,6 +28,7 @@ const Table: FC = () => {
           <th scope="col">{COLUMN_THIRD}</th>
         </tr>
       </thead>
+      
       <tbody>
         {movies && movies.Search ? (
           movies.Search
@@ -31,7 +42,9 @@ const Table: FC = () => {
             ))
         ) : null}
       </tbody>
-    </table>
+    </table>)}
+    
+    </div>
   );
 }
 

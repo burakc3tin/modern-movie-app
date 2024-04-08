@@ -73,6 +73,7 @@ export const getMoviesSlice = createSlice({
 
 export const { setCurrentPage, setQuery, setYear, setSingleMovie } = getMoviesSlice.actions;
 
+export const selectLoading = (state) => state.movies.loading;
 export const selectMovie = (state) => state.movies.movie;
 export const selectCurrentPage = (state) => state.movies.currentPage;
 export const selectQuery = (state) => state.movies.query; 
