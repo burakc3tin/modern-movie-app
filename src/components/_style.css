@@ -31,7 +31,7 @@ tr {
     }
 }
 
-.tableContainer{
+.tableContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,7 @@ tr {
 @media (max-width: 400px) {
     .close-btn {
         font-size: 20px;
-        top:0;
+        top: 0;
     }
 }
 
@@ -93,37 +93,38 @@ tr {
 
 /* --- Card --- */
 @media (max-height: 600px) {
-    .card img{
+    .card img {
         width: 150px;
         height: 150px;
         margin-left: 67px;
-   }
+    }
 }
+
 @media (max-width: 600px) {
-    .card img{
+    .card img {
         width: 250px;
         height: 250px;
         margin-left: 18px;
-   }
+    }
 }
+
 @media (max-width: 400px) {
-    .h5{
+    .h5 {
         font-size: 16px;
     }
-    .h6{
+
+    .h6 {
         font-size: 14px;
     }
 
-    .paragraph{
+    .paragraph {
         font-size: 13px;
     }
-    .card img{
+
+    .card img {
         width: 250px;
         height: 250px;
         margin-left: 18px;
-        
-   }
+
+    }
 }
-
- 
-

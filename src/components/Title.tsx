@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import {TITLE_TEXT} from '../constants/constant';
+import { TITLE_TEXT } from '../constants/constant';
 
 const Title: FC = () => {
   return (

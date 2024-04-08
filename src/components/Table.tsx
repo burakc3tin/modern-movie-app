@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { COLUMN_ONE, COLUMN_SECOND, COLUMN_THIRD } from '../constants/constant';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectMovie, selectLoading, fetchMovie, selectQuery,selectYear } from '../redux/features/getMoviesSlice';
+import { selectMovie, selectLoading, fetchMovie, selectQuery, selectYear } from '../redux/features/getMoviesSlice';
 import { useNavigate } from 'react-router-dom';
 import { PacmanLoader } from 'react-spinners';
 import './_style.css';
@@ -14,14 +14,14 @@ const Table: FC = () => {
   const queryField = useSelector(selectQuery)
   const yearField = useSelector(selectYear);
 
-  const itemsPerPage = 10; 
+  const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const [currentMovies, setCurrentMovies] = useState([]);
 
   useEffect(() => {
-     
+
     dispatch(fetchMovie({ query: queryField, page: 1, year: yearField }));
-  }, [dispatch,yearField]);
+  }, [dispatch, yearField]);
 
   useEffect(() => {
     if (movies && movies.Search) {
