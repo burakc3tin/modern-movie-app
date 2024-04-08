@@ -18,7 +18,7 @@ Movie application created in Vite React using OMDb API, Bootstrap, Redux. A tabu
 2. Navigate to the project directory.
    
    ```sh
-   git clone https://github.com/YOUR_USERNAME/PROJECT_NAME.git
+   cd PROJECT_NAME
    
 3. Install dependencies.
 
