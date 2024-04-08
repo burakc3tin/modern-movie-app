@@ -1,7 +1,7 @@
 // Pagination.js
 
 import { FC } from 'react';
-import { usePaginationHandlers } from '../hooks/paginationHandlers.ts';
+import { usePaginationHandlers } from '../hooks/usePaginationHandlers.ts';
 import { PREVIOUS, NEXT } from '../constants/constant';
 import './_style.css';
 

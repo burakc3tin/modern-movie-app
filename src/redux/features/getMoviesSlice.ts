@@ -4,16 +4,24 @@ import axios from 'axios';
 export const fetchMovie = createAsyncThunk(
   'movies/fetchMovie',
   async ({ query, page, year }) => {
-    const response = await axios.get(`https://www.omdbapi.com/?s=${query}&y=${year}&page=${page}&apikey=${import.meta.env.VITE_REACT_OMDB_KEY}`);
-    return response.data;   
+    try {
+      const response = await axios.get(`https://www.omdbapi.com/?s=${query}&y=${year}&page=${page}&apikey=${import.meta.env.VITE_REACT_OMDB_KEY}`);
+      return response.data;
+    } catch (error) {
+      throw Error(error.response.data.Error);
+    }
   }
 );
 
 export const fetchSingleMovie = createAsyncThunk(
   'movies/fetchSingleMovie',
   async (title) => {
-    const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=${import.meta.env.VITE_REACT_OMDB_KEY}`);
-    return response.data;
+    try {
+      const response = await axios.get(`https://www.omdbapi.com/?t=${title}&apikey=${import.meta.env.VITE_REACT_OMDB_KEY}`);
+      return response.data;
+    } catch (error) {
+      throw Error(error.response.data.Error);
+    }
   }
 );
 
