@@ -11,7 +11,7 @@ const CloseButton: React.FC = () => {
   }
 
   return (
-    <a href="" className='close-btn' onClick={handleQuit}>{CLOSE_TEXT}</a>
+    <a href = "" className ='close-btn' onClick = {handleQuit}>{CLOSE_TEXT}</a>
   );
 }
 

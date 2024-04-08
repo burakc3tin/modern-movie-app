@@ -11,11 +11,11 @@ const SearchBar: FC = () => {
   const queryField = useSelector(selectQuery);
 
   return (
-    <div className="container input-group m-4">
-      <input type="text" className="form-control text-center" placeholder={MOVIE_NAME} onChange={handleChangeQuery} value={queryField} />
-      <input className='button' onClick={handleSubmit} type="button" value={SEARCH_BUTTON_TEXT} />
-      <input type="text" className="form-control text-center" placeholder={MOVIE_RELEASE_YEAR} onChange={handleChangeYear} />
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+    <div className = "container input-group m-4">
+      <input type = "text" className = "form-control text-center" placeholder = {MOVIE_NAME} onChange = {handleChangeQuery} value = {queryField} />
+      <input className = 'button' onClick={handleSubmit} type = "button" value = {SEARCH_BUTTON_TEXT} />
+      <input type = "text" className = "form-control text-center" placeholder = {MOVIE_RELEASE_YEAR} onChange = {handleChangeYear} />
+      {errorMessage && <p className = "error-message">{errorMessage}</p>}
     </div>
   );
 };

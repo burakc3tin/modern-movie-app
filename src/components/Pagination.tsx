@@ -9,15 +9,15 @@ const Pagination: FC = () => {
   const { handlePrevious, handleNext } = usePaginationHandlers();
 
   return (
-    <nav aria-label="Page navigation example">
-      <ul className="pagination">
-        <li className="page-item">
-          <a className="page-link" href="#" onClick={handlePrevious}>
+    <nav aria-label = "Page navigation example">
+      <ul className = "pagination">
+        <li className = "page-item">
+          <a className = "page-link" href="#" onClick = {handlePrevious}>
             {PREVIOUS}
           </a>
         </li>
-        <li className="page-item">
-          <a className="page-link" href="#" onClick={handleNext}>
+        <li className = "page-item">
+          <a className = "page-link" href="#" onClick = {handleNext}>
             {NEXT}
           </a>
         </li>

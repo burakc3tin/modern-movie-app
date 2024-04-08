@@ -32,12 +32,12 @@ const Table: FC = () => {
   }, [movies, currentPage]);
 
   return (
-    <div className='table text-center tableContainer'>
+    <div className = 'table text-center tableContainer'>
       {isLoading ? (
         <PacmanLoader color="#d6bc36" />
       ) : (
         <>
-          <table className="table table-warning text-center">
+          <table className = "table table-warning text-center">
             <thead>
               <tr>
                 <th scope="col">{COLUMN_ONE}</th>
@@ -55,7 +55,7 @@ const Table: FC = () => {
               ))}
             </tbody>
           </table>
-          {/* Pagination bileşenini buraya ekle */}
+         
         </>
       )}
     </div>
