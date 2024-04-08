@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Movie's Park
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movie application created in Vite React using OMDb API, Bootstrap, Redux. A tabular list is shown on a single page with movie data captured from the API. You can click on any movie and get detailed information about the movie on the detail page.
+## Getting Started
 
-Currently, two official plugins are available:
+### Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (version 14 or higher)
+- npm or Yarn
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone this repository to your local machine.
 
-- Configure the top-level `parserOptions` property like this:
+   ```sh
+   git clone https://github.com/YOUR_USERNAME/PROJECT_NAME.git
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Navigate to the project directory.
+   
+   ```sh
+   git clone https://github.com/YOUR_USERNAME/PROJECT_NAME.git
+   
+3. Install dependencies.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```sh
+   npm install
+
+### Usage
+```sh
+   npm run dev
