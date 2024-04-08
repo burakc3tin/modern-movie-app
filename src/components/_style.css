@@ -31,6 +31,12 @@ tr {
     }
 }
 
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* --- Close Button --- */
 .close-btn {
     position: fixed;

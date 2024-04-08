@@ -1,28 +1,12 @@
+// Pagination.js
+
 import { FC } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMovie, selectQuery, setCurrentPage, selectCurrentPage, selectYear } from '../redux/features/getMoviesSlice.ts';
+import { usePaginationHandlers } from '../hooks/paginationHandlers.ts';
 import { PREVIOUS, NEXT } from '../constants/constant';
 import './_style.css';
 
 const Pagination: FC = () => {
-  const dispatch = useDispatch();
-  const currentPage = useSelector(selectCurrentPage);
-  const queryField = useSelector(selectQuery)
-  const yearField = useSelector(selectYear);
-
-  const handlePrevious = () => {
-    if (currentPage > 1) {
-      dispatch(setCurrentPage(currentPage - 1));
-      dispatch(fetchMovie({ query: queryField, page: currentPage - 1, year: yearField }));
-
-    }
-  };
-
-  const handleNext = () => {
-    dispatch(setCurrentPage(currentPage + 1));
-    dispatch(fetchMovie({ query: queryField, page: currentPage + 1, year: yearField }));
-
-  };
+  const { handlePrevious, handleNext } = usePaginationHandlers();
 
   return (
     <nav aria-label="Page navigation example">
